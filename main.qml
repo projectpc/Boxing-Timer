@@ -26,7 +26,7 @@ ApplicationWindow {
                 "RoundEnd": "red",
                 "Rest": "yellow"
     }
-
+/////////
     property var beepPath: [
         "qrc:/signal/Alert.mp3",    // 0 - Round
         "qrc:/signal/Gong2.mp3",    // 1 - RoundEnd
