@@ -1,0 +1,188 @@
+[
+    {
+        "outputFile": "D:\\111\\TimerUI\\android-build\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 610,
+                    "endColumn": 12,
+                    "endOffset": 84267
+                },
+                "from": {
+                    "file": "D:\\111\\TimerUI\\android-build\\res\\values\\libs.xml",
+                    "position": {
+                        "startLine": 87,
+                        "startColumn": 4,
+                        "startOffset": 6350,
+                        "endLine": 695,
+                        "endColumn": 12,
+                        "endOffset": 90564
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 611,
+                    "startColumn": 4,
+                    "startOffset": 84272,
+                    "endLine": 664,
+                    "endColumn": 12,
+                    "endOffset": 89767
+                },
+                "from": {
+                    "file": "D:\\111\\TimerUI\\android-build\\res\\values\\libs.xml",
+                    "position": {
+                        "startLine": 33,
+                        "startColumn": 4,
+                        "startOffset": 847,
+                        "endLine": 86,
+                        "endColumn": 12,
+                        "endOffset": 6344
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 665,
+                    "startColumn": 4,
+                    "startOffset": 89772,
+                    "endLine": 667,
+                    "endColumn": 12,
+                    "endOffset": 89821
+                },
+                "from": {
+                    "file": "D:\\111\\TimerUI\\android-build\\res\\values\\libs.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 300,
+                        "endLine": 11,
+                        "endColumn": 12,
+                        "endOffset": 351
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 668,
+                    "startColumn": 4,
+                    "startOffset": 89826,
+                    "endLine": 686,
+                    "endColumn": 13,
+                    "endOffset": 90303
+                },
+                "from": {
+                    "file": "D:\\111\\TimerUI\\android-build\\res\\values\\libs.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 5,
+                        "startOffset": 360,
+                        "endLine": 31,
+                        "endColumn": 13,
+                        "endOffset": 839
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 687,
+                    "startColumn": 4,
+                    "startOffset": 90308,
+                    "endLine": 689,
+                    "endColumn": 12,
+                    "endOffset": 90418
+                },
+                "from": {
+                    "file": "D:\\111\\TimerUI\\android-build\\res\\values\\libs.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endLine": 4,
+                        "endColumn": 12,
+                        "endOffset": 169
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 690,
+                    "startColumn": 4,
+                    "startOffset": 90423,
+                    "endColumn": 107,
+                    "endOffset": 90526
+                },
+                "from": {
+                    "file": "C:\\Qt\\5.9.2\\android_x86\\src\\android\\java\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 324,
+                        "endColumn": 107,
+                        "endOffset": 427
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 691,
+                    "startColumn": 4,
+                    "startOffset": 90531,
+                    "endColumn": 121,
+                    "endOffset": 90648
+                },
+                "from": {
+                    "file": "C:\\Qt\\5.9.2\\android_x86\\src\\android\\java\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 201,
+                        "endColumn": 121,
+                        "endOffset": 318
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 692,
+                    "startColumn": 4,
+                    "startOffset": 90653,
+                    "endColumn": 111,
+                    "endOffset": 90760
+                },
+                "from": {
+                    "file": "C:\\Qt\\5.9.2\\android_x86\\src\\android\\java\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 88,
+                        "endColumn": 111,
+                        "endOffset": 195
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 693,
+                    "startColumn": 4,
+                    "startOffset": 90765,
+                    "endColumn": 84,
+                    "endOffset": 90845
+                },
+                "from": {
+                    "file": "C:\\Qt\\5.9.2\\android_x86\\src\\android\\java\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 433,
+                        "endColumn": 84,
+                        "endOffset": 513
+                    }
+                }
+            }
+        ]
+    }
+]

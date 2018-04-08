@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="D:\111\TimerUI\android-build\libs\QtMultimedia-bundled.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="20ce66db4da5914aef41bc20ad262be2001ec829">
+        <dex dex="D:\111\TimerUI\android-build\build\intermediates\pre-dexed\debug\QtMultimedia-bundled_1fcd578a607ca5a330c71725f7995613003f7033.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\111\TimerUI\android-build\libs\QtAndroid-bundled.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="2938d2371349f30ec9b9ee6a00208209052d3e58">
+        <dex dex="D:\111\TimerUI\android-build\build\intermediates\pre-dexed\debug\QtAndroid-bundled_35aa312b46a48de483ed10795c2d59993135154e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\111\TimerUI\android-build\libs\QtSensors-bundled.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="25808e47c4ec19778992e39f17209cafed8c0379">
+        <dex dex="D:\111\TimerUI\android-build\build\intermediates\pre-dexed\debug\QtSensors-bundled_eb3c43980cacca155bbff89fa1c54bf94ff45ebf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\111\TimerUI\android-build\libs\QtAndroidBearer-bundled.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a0557b146ca8fef1dc6a96135876002f28437bde">
+        <dex dex="D:\111\TimerUI\android-build\build\intermediates\pre-dexed\debug\QtAndroidBearer-bundled_d6cab6f4074618f430989802cff662eca0560345.jar" />
+    </item>
+
+</items>
