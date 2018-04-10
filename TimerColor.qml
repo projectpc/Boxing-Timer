@@ -17,22 +17,22 @@ Page {
             delegate: ItemDelegate {
                 text: switch(index){
                       case 0:
-                          qsTr("Цвет таймера")
+                          qsTr("Цвет циферблата")
                           break
                       case 1:
-                          qsTr("Фон таймера")
+                          qsTr("Цвет экрана")
                           break
                       case 2:
-                          qsTr("Фон раунда")
+                          qsTr("Цвет панелей")
                           break
                       case 3:
-                          qsTr("Фон конца раунда")
+                          qsTr("Фон раунда")
                           break
                       case 4:
-                          qsTr("Фон в перерыве")
+                          qsTr("Фон конца раунда")
                           break
                       case 5:
-                          qsTr("Цвет панелей")
+                          qsTr("Фон в перерыве")
                           break
                       default :"ERROR"+index
                           break
@@ -46,22 +46,22 @@ Page {
                     id:krug
                     color:  switch(index){
                             case 0:
-                                color=myWindow.color_Text_Timer
+                                dataBase.getColor("colorTimerFont")
                                 break
                             case 1:
-                                myWindow.color_Fon_Timer
+                                dataBase.getColor("colorScreen")
                                 break
                             case 2:
-                                timerFon.Round
+                                dataBase.getColor("colorPanel")
                                 break
                             case 3:
-                                timerFon.RoundEnd
+                                dataBase.getColor("colorRound")
                                 break
                             case 4:
-                                timerFon.Rest
+                                dataBase.getColor("colorRoundEnd")
                                 break
                             case 5:
-                                topBarColor.color
+                                dataBase.getColor("colorRest")
                                 break
                             default :"ERROR"
                                 break
@@ -80,7 +80,7 @@ Page {
                     colorDialog.setColor(color)
                     colorDialog.visible=true
                     console.log("==index===",index)
-list.currentIndex=index
+                    list.currentIndex=index
 
                 }
                 Rectangle{
@@ -102,16 +102,29 @@ list.currentIndex=index
                                  :list.contentItem.children[list.currentIndex+1].color = color
 
 
-if(list.currentIndex==0){
-            myWindow.color_Text_Timer=""+list.contentItem.children[0].color
-}
+            if(list.currentIndex==0){
+                // timerFon.colorScreen=""+list.contentItem.children[0].color
+                dataBase.setColor("colorTimerFont",list.contentItem.children[0].color)
+            }
 
-            myWindow.color_Fon_Timer=""+list.contentItem.children[2].color
-            timerFon.Round=""+list.contentItem.children[3].color
-            timerFon.RoundEnd=""+list.contentItem.children[4].color
-            timerFon.Rest=""+list.contentItem.children[5].color
-            topBarColor.color=""+list.contentItem.children[6].color
+            dataBase.setColor("colorScreen",list.contentItem.children[2].color)
+            dataBase.setColor("colorPanel",list.contentItem.children[3].color)
+            dataBase.setColor("colorRound",list.contentItem.children[4].color)
+            dataBase.setColor("colorRoundEnd",list.contentItem.children[5].color)
+            dataBase.setColor("colorRest",list.contentItem.children[6].color)
 
+
+//            dataBase.setColor("colorRound",list.contentItem.children[3].color)
+//            dataBase.setColor("colorRoundEnd",list.contentItem.children[4].color)
+//            dataBase.setColor("colorRest",list.contentItem.children[5].color)
+//            dataBase.setColor("colorPanel",list.contentItem.children[6].color)
+
+
+            var itm=stackView.find (function (item) {return item.objectName === "pageStart"})
+            console.log(itm)
+            itm.updatePanel();
+            //Ищем страниу находящуюся в стеке с objectName= "pageStart"
+            //и возвращаем обьект страницы если не нашли то null .Дальше можно обращатся к элементам
         }
 
 

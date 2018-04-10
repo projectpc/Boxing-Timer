@@ -23,7 +23,7 @@ Page {
     Rectangle{
         id:panelColor
         anchors.fill: parent
-        color:myWindow.color_Fon_Timer
+        color:dataBase.getColor("colorScreen")//myWindow.color_Fon_Timer
     }
 
 
@@ -53,7 +53,7 @@ Page {
             opacity: 1.0 - Math.abs(Tumbler.displacement) / (Tumbler.tumbler.visibleItemCount / 2)
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            color: myWindow.color_Text_Timer
+            color: dataBase.getColor("colorTimerFont")
 
         }
     }
@@ -63,13 +63,13 @@ Page {
         spacing: textSize()/4
         anchors.centerIn: parent
         Rectangle{
-            color: myWindow.color_Text_Timer
+            color: dataBase.getColor("colorTimerFont")
             radius: 100
             implicitWidth: windowSize3()/10
             implicitHeight: windowSize3()/10
         }
         Rectangle{
-            color: myWindow.color_Text_Timer
+            color: dataBase.getColor("colorTimerFont")
             radius: 100
             implicitWidth: windowSize3()/10
             implicitHeight: windowSize3()/10
@@ -134,7 +134,7 @@ Page {
             opacity: 1.0 - Math.abs(Tumbler.displacement) / (Tumbler.tumbler.visibleItemCount / 2)
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            color: myWindow.color_Text_Timer
+            color: dataBase.getColor("colorTimerFont")
         }
 
     }
@@ -161,7 +161,7 @@ Page {
             opacity: 1.0 - Math.abs(Tumbler.displacement) / (Tumbler.tumbler.visibleItemCount / 2)
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            color: myWindow.color_Text_Timer
+            color: dataBase.getColor("colorTimerFont")
         }
 
     }

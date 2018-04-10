@@ -12,11 +12,11 @@ Page {
     property alias timerRunning: timer.running
     property alias timer_text: timer_text
     property bool worckRound : false
-
+property alias panelColor: panelColor.color
     Rectangle{
         id:panelColor
         anchors.fill: parent
-        color:myWindow.color_Fon_Timer
+        color:dataBase.getColor("colorScreen")//myWindow.color_Fon_Timer
 
     }
 
@@ -27,7 +27,7 @@ Page {
         anchors.verticalCenterOffset: -5
         anchors.horizontalCenterOffset: -4
         font.pixelSize: windowSize()//*0.8
-        color: myWindow.color_Text_Timer
+        color: dataBase.getColor("colorTimerFont")//timerFon.colorTimerFont
         font.bold: true
         font.family: openSans.name
         text: timerSettingDef[0]//minSec(parseInt(timerSettingDef[0].split(":")[0]),parseInt(timerSettingDef[0].split(":")[1]))//textMin[3]+":"+textSec[0]
@@ -70,12 +70,12 @@ Page {
                 if(worckRound){
 
                     console.log("++++++++Round_Start_________")
-                    panelColor.color=timerFon.Round
+                    panelColor.color=dataBase.getColor("colorRound")
                     beep(beepPath[0])
                 }
                 else {
                     console.log("++++++++++Rest_Start__________")
-                    panelColor.color=timerFon.Rest
+                    panelColor.color=dataBase.getColor("colorRest")
                     beep(beepPath[2])
                 }
 
@@ -87,7 +87,7 @@ Page {
                 //Сигнал до окончания раунда +1
                 if(timer.min===0&timer.sec==3){
                     beep(beepPath[1])
-                    panelColor.color=timerFon.RoundEnd
+                    panelColor.color=dataBase.getColor("colorRoundEnd")
                 }
             }
             else {
@@ -172,5 +172,13 @@ Page {
     FontLoader {
         id: openSans
         source: "qrc:/font/digital.ttf"
+    }
+
+    function updatePanel(){
+        console.log("--------------------")
+        panelColor.color=dataBase.getColor("colorScreen")
+        timer_text.color=dataBase.getColor("colorTimerFont")
+        topBarColor.color=dataBase.getColor("colorPanel")
+      //  footerBarColor.color="red"
     }
 }

@@ -3,30 +3,24 @@
 //Ищем страниу находящуюся в стеке с objectName= "pageStart"
 //и возвращаем обьект страницы если не нашли то null .Дальше можно обращатся к элементам
 //----------------------------------------------------------------------------------
+//======================
 import QtQuick 2.9
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import QtQuick.Dialogs 1.0
 import QtMultimedia 5.8
 import QtQuick.Controls.Styles 1.4
-import Qt.labs.settings 1.0
+//import Qt.labs.settings 1.0
 
 ApplicationWindow {
     id: myWindow
     visible: true
     width:  368
     height: 731
-    property alias stackView: stackView
-    property alias topBarColor: topBarColor
 
+    property alias stackView: stackView
     property alias player: player
     property var timerSettingDef: setTimerDef2(6,"00:06","00:03")
-    property var timerFon: {
-        "Round": "green",
-                "RoundEnd": "red",
-                "Rest": "yellow"
-    }
-/////////
     property var beepPath: [
         "qrc:/signal/Alert.mp3",    // 0 - Round
         "qrc:/signal/Gong2.mp3",    // 1 - RoundEnd
@@ -34,26 +28,16 @@ ApplicationWindow {
         "qrc:/signal/Restend.mp3",  // 3 - RestEnd
         "qrc:/signal/Alert.mp3"     // 4 - Period
     ]
-    //Round RoundEnd Rest RestEnd Period
     property var beepName: [
         "Alert","Gong2","Alert","Restend","Alert"
     ]
     property string startButtonText: startButton.text
     property bool pause: startButton.text=="Пауза"?true:false
-
-
-    property string myWindowColor:myWindow.color
     property alias myWindow:myWindow
     property alias footerBar: footerBar
-
-    property color color_Text_Timer:"#fff"
-    property color color_Fon_Timer:"#303030"
-    property alias topBar: topBar
-    Settings {
-        property alias colorPanel:myWindow.color_Text_Timer
-        property alias colorTextTimer:myWindow.color_Fon_Timer
-        property alias colorBar: topBarColor.color
-    }
+    property alias footerBarColor: footerBarColor
+    property alias topBar:topBar
+    property alias topBarColor: topBarColor
 
     onActiveChanged:{
         setTimerDef(6, timerSettingDef)
@@ -86,10 +70,10 @@ ApplicationWindow {
         Rectangle{
             id:topBarColor
             anchors.fill: parent
-            color: "transparent"
-            Settings {
-                  property alias colorBar:topBarColor.color
-                }
+            color: dataBase.getColor("colorPanel")//"transparent"
+            //            Settings {
+            //                property alias colorBar:topBarColor.color
+            //            }
         }
 
         ToolButton {
@@ -125,11 +109,11 @@ ApplicationWindow {
         onAboutToShow:{
 
             var itm=stackView.find (function (item) {return item.objectName === "pageStart"})
-//           console.log("-------------",itm)
-//            itm!==null&stackView.currentItem.timer.running?
-//                          stackView.currentItem.timer.stop():""
+            //           console.log("-------------",itm)
+            //            itm!==null&stackView.currentItem.timer.running?
+            //                          stackView.currentItem.timer.stop():""
             if(itm!==null&itm.timer.running){
-                        itm.timer.stop()}
+                itm.timer.stop()}
         }
         dragMargin: 0
         Column {
@@ -245,7 +229,7 @@ ApplicationWindow {
         Rectangle{
             id:footerBarColor
             anchors.fill: parent
-            color: topBarColor.color//"transparent"
+            color: topBarColor.color//dataBase.getColor("colorPanel")//topBarColor.color//"transparent"
         }
         RowLayout {
             anchors.fill: parent
@@ -258,9 +242,11 @@ ApplicationWindow {
                 text: qsTr("Сброс")
                 property int clic: 1
                 onClicked: {
-                    console.log(timerSettingDef)
-                    topBarColor.color="#000"
-                   // cppClass.scrinDimLuck()
+console.log(dataBase.getValue("1","round_text","1"))
+
+                    //console.log(timerSettingDef)
+                    //  topBarColor.color="#000"
+                    // cppClass.scrinDimLuck()
                     ///     stackView.currentItem.tumblerSec=59//tumbler.currentIndex=1
                     ///     stackView.currentItem.tumblerMin=80
 
@@ -284,7 +270,7 @@ ApplicationWindow {
                     //cppClass.scrinFullLuck()
                     if(stackView.currentItem.timer.running){
 
-                      //  stackView.currentItem.timer.stoped=true
+                        //  stackView.currentItem.timer.stoped=true
                         stackView.currentItem.timer.stop()
                     }
                     else{
@@ -313,4 +299,6 @@ ApplicationWindow {
         player.source=path
         player.play()
     }
+
+
 }

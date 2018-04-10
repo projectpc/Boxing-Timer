@@ -6,9 +6,13 @@ Page {
     title: qsTr("Настройка тайминга")
   //  anchors.fill: parent
     Component.onCompleted:  {
-       // myWindow.updateValue()
-    }
+       console.log("----------","Component.onCompleted")
 
+    }
+onVisibleChanged: {
+    if(visible==false)console.log("----------","visible==false")
+    dataRead()
+}
     ScrollView {
         anchors.fill: parent
         // ScrollBar.vertical.policy: ScrollBar.AlwaysOff
@@ -135,6 +139,14 @@ Page {
             }
         }
     }
+    function dataRead(){
+       for(var i=0;i<list.count;i++){
+           if(i!=1)console.log(list.contentItem.children[i].countR);
+       }
+
+    }
+
+
     function setText(index){
         var intR=1
         if(index%2==0){
@@ -146,9 +158,9 @@ Page {
     }
     function setColor(index){
         if(index%2){
-            return timerFon.Rest//myWindow.color_Pause
+            return dataBase.getColor("colorRest")//myWindow.color_Pause
         }
-        else return timerFon.Round//myWindow.color_Round
+        else return dataBase.getColor("colorRound")//myWindow.color_Round
     }
 
 }
